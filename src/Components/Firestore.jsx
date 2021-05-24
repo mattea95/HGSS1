@@ -10,16 +10,15 @@ function Firestore(props) {
   const [uredivanje, seturedivanje] = React.useState(false);
   const [id, setId] = React.useState("");
   React.useEffect(() => {
-    // Para conectar la base de datos usaremos una funcion
+    // Funkcija za povezivanje baze podataka
     const obtenerDatos = async () => {
       try {
-        // Ejecutamos el metodo get lo podemos hacer dentro del try o podemos usar promesas con then
         const data = await db
           .collection(props.user.uid)
           .orderBy("fecha", "desc")
           .get();
 
-        // Una vez obtenemos la colleccion en este caso el id del usuario la mostramos en consola
+        // kada dobijemo kolekciju, ID korisnika prikazujemo u konzoli
         const arrayData = data.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),

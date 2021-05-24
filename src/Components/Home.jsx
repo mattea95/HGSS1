@@ -1,4 +1,5 @@
 import React from "react";
+
 const Home = () => {
   return (
     <div className="container md:w-3/4 mx-auto mt-20 mb-10">
