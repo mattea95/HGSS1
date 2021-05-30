@@ -22,7 +22,7 @@ const Navbar = (props) => {
         <NavLink
           className="text-white p-3 rounded block box-border mr-2"
           activeClassName="bg-gray-900 font-bold"
-          to="/"
+          to="/prijavinesrecu"
           exact
         >
           Prijavi nesreću
